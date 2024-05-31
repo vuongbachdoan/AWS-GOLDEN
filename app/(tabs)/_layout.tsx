@@ -32,6 +32,24 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="cources"
+        options={{
+          href: null,
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="details"
+        options={{
+          href: null,
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
