@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Explore</ThemedText>
       </ThemedView>
-      <ThemedText>Find the cources you interested!</ThemedText>
+      <ThemedText type="subtitle">Find the cources you interested!</ThemedText>
 
       <Button title="AWS Developer - Associate" />
       <Button title="AWS Solution Architect - Associate" />
