@@ -1,14 +1,22 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { StyleSheet, Button } from "react-native";
+import { StyleSheet, Image, View } from "react-native";
 
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { useNavigation } from "expo-router";
-import { NavigationProp } from "@react-navigation/native";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { MainTabScreenProps } from "../types";
+import { useNavigation } from "@react-navigation/native";
 
-export default function TabTwoScreen() {
-  const navigation = useNavigation();
+const CERTS = [
+  {
+    name: "SCS",
+    url: require("@/assets/images/SCS.png"),
+  },
+];
+
+export default function TabTwoScree() {
+  const {navigation}: MainTabScreenProps<"Explore"> = useNavigation();
 
   return (
     <ParallaxScrollView
@@ -22,12 +30,24 @@ export default function TabTwoScreen() {
       </ThemedView>
       <ThemedText type="subtitle">Find the cources you interested!</ThemedText>
 
-      <Button title="AWS Developer - Associate" />
-      <Button title="AWS Solution Architect - Associate" />
-      <Button
-        onPress={() => navigation.navigate("cources" as never)}
-        title="AWS Security - Speciality"
-      />
+      <View style={styles.certList}>
+        {CERTS.map((cert) => {
+          return (
+            <TouchableOpacity
+              onPress={() => {
+                alert(navigation);
+                navigation.navigate("Cources", { cert_id: cert.name });
+              }}
+              key={cert.name}
+            >
+              <Image
+                source={cert.url}
+                style={{ width: 120, height: 120, cursor: "pointer" }}
+              />
+            </TouchableOpacity>
+          );
+        })}
+      </View>
     </ParallaxScrollView>
   );
 }
@@ -42,5 +62,12 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: "row",
     gap: 8,
+  },
+  certList: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    rowGap: 30,
+    columnGap: 30,
   },
 });

@@ -6,6 +6,10 @@ import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { Stack } from 'expo-router';
+import { createStackNavigator } from '@react-navigation/stack';
+import { RootStackParamList } from './types';
+
+const RootStack = createStackNavigator<RootStackParamList>();
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();

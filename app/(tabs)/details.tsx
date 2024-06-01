@@ -1,12 +1,11 @@
-import { Image, StyleSheet, Platform, Button } from "react-native";
+import { Image, StyleSheet } from "react-native";
 
-import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import { Collapsible } from "@/components/Collapsible";
 
-export default function DetailScreen() {
-  const COURSE_NAME = "AWS Certified Security - Speciality";
+export default function DetailScreen({ SECTION_NAME = "Domain 1. Thread detection & incident response"}) {
 
   return (
     <ParallaxScrollView
@@ -19,12 +18,144 @@ export default function DetailScreen() {
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome to details</ThemedText>
-        <HelloWave />
+        <ThemedText type="title">{SECTION_NAME}</ThemedText>
       </ThemedView>
-      <ThemedText type="subtitle">{COURSE_NAME}</ThemedText>
 
-      <Button title="Domain 1. Thread detection & incident response" />
+      <Collapsible title="GuardDuty">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="SecurityHub">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="Detective">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="Penetration testing on AWS">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="DDoS simulation testing on AWS">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="Compromise AWS resources">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="Compromise AWS credentials">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="EC2 key pairs & remediating exposed key pairs">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="EC2 instance connect">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="EC2 serial console">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="Lost EC2 key pair - Linux">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="Lost EC2 key pair - Windows">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="EC2 rescue tool for Linux & Windows">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="AWS acceptable use policy (AUP)">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="AWS abuse report">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="IAM security tools">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="IAM access analyzer">
+        <ThemedText>
+          You can open this project on Android, iOS, and the web. To open the
+          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{" "}
+          in the terminal running this project.
+        </ThemedText>
+      </Collapsible>
     </ParallaxScrollView>
   );
 }

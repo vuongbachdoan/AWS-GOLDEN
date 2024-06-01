@@ -67,7 +67,7 @@ export default function HomeScreen() {
 
       <View style={styles.certList}>
       {CERTS.map((cert) => {
-        return <Image source={cert.url} width="30%" height="auto"/>;
+        return <Image key={cert.name} source={cert.url} style={{width: 120, height: 120}}/>;
       })}
       </View>
     </ParallaxScrollView>
